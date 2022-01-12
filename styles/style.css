@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #082032;
+  color: #334756;
+}
+
+header {
+  margin-bottom: 2em;
+}
+header h1 {
+  font-size: 2.8em;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  line-height: 0.8em;
+  text-transform: uppercase;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 5% auto 5%;
+  grid-template-rows: auto 2em auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.intro {
+  grid-column: 2;
+  line-height: 1.6em;
+  font-family: monospace;
+}
+
+.generator {
+  grid-row: 3;
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1em 1fr 1em 1fr 1em 1fr 1em;
+  grid-template-columns: 1em 1fr 1em 1fr 1em;
+}
+.generator__length {
+  grid-row: 2;
+  grid-column: 2;
+  font-family: "Orbitron", sans-serif;
+  padding: 0.7em;
+  border: none;
+  border-radius: 0.8em;
+  background-color: #334756;
+  color: #082032;
+}
+.generator__password {
+  grid-row: 4;
+  grid-column: 2;
+  grid-column-end: span 3;
+  font-family: monospace;
+  background-color: #334756;
+  color: #082032;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.7em;
+  border: none;
+  border-radius: 0.8em;
+  letter-spacing: 0.11em;
+}
+.generator__btn {
+  font-family: "Orbitron", sans-serif;
+  padding: 0.7em;
+  border: none;
+  border-radius: 0.8em;
+  background-color: #334756;
+  color: #082032;
+  font-weight: 600;
+  -webkit-box-shadow: 0 0 12px antiquewhite;
+  box-shadow: 0 0 12px antiquewhite;
+}
+.generator__btn--create {
+  grid-row: 2;
+  grid-column: 4;
+}
+.generator__btn--create:active {
+  -webkit-box-shadow: 0 0 20px green;
+  box-shadow: 0 0 20px green;
+}
+.generator__btn--copy {
+  grid-row: 6;
+  grid-column: 2;
+}
+.generator__btn--copy:active {
+  -webkit-box-shadow: 0 0 20px skyblue;
+  box-shadow: 0 0 20px skyblue;
+}
+.generator__btn--reset {
+  grid-row: 6;
+  grid-column: 4;
+}
+.generator__btn--reset:active {
+  -webkit-box-shadow: 0 0 20px red;
+  box-shadow: 0 0 20px red;
+}
+
+.copied {
+  position: relative;
+}
+.copied::after {
+  content: "Password copied";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 1em;
+  text-align: left;
+  background-color: #334756;
+  color: antiquewhite;
+  padding: 0.6em;
+  border-radius: 0.4em;
+  font-weight: 500;
+} /*# sourceMappingURL=style.css.map */
