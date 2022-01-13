@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
 }
 header h1 {
   font-size: 2.8em;
@@ -75,16 +75,18 @@ main {
   background-color: #334756;
   color: #082032;
   font-weight: 600;
-  -webkit-box-shadow: 0 0 12px antiquewhite;
-  box-shadow: 0 0 12px antiquewhite;
+  -webkit-box-shadow: 0 0 7px antiquewhite;
+          box-shadow: 0 0 7px antiquewhite;
 }
 .generator__btn--create {
   grid-row: 2;
   grid-column: 4;
+  -webkit-box-shadow: 0 0 12px antiquewhite;
+          box-shadow: 0 0 12px antiquewhite;
 }
 .generator__btn--create:active {
   -webkit-box-shadow: 0 0 20px green;
-  box-shadow: 0 0 20px green;
+          box-shadow: 0 0 20px green;
 }
 .generator__btn--copy {
   grid-row: 6;
@@ -92,7 +94,7 @@ main {
 }
 .generator__btn--copy:active {
   -webkit-box-shadow: 0 0 20px skyblue;
-  box-shadow: 0 0 20px skyblue;
+          box-shadow: 0 0 20px skyblue;
 }
 .generator__btn--reset {
   grid-row: 6;
@@ -100,7 +102,7 @@ main {
 }
 .generator__btn--reset:active {
   -webkit-box-shadow: 0 0 20px red;
-  box-shadow: 0 0 20px red;
+          box-shadow: 0 0 20px red;
 }
 
 .copied {
@@ -118,4 +120,38 @@ main {
   padding: 0.6em;
   border-radius: 0.4em;
   font-weight: 500;
-} /*# sourceMappingURL=style.css.map */
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: 5% auto 2em auto 5%;
+    grid-template-rows: auto;
+    max-width: 70%;
+  }
+
+  .intro {
+    grid-column: 2;
+  }
+
+  .generator {
+    grid-row: 1;
+    grid-column: 4;
+    height: 10em;
+  }
+  .generator__btn:hover {
+    -webkit-box-shadow: 0 0 20px antiquewhite;
+            box-shadow: 0 0 20px antiquewhite;
+  }
+  .generator__btn--create:active {
+    -webkit-box-shadow: 0 0 20px green;
+            box-shadow: 0 0 20px green;
+  }
+  .generator__btn--copy:active {
+    -webkit-box-shadow: 0 0 20px skyblue;
+            box-shadow: 0 0 20px skyblue;
+  }
+  .generator__btn--reset:active {
+    -webkit-box-shadow: 0 0 20px red;
+            box-shadow: 0 0 20px red;
+  }
+}/*# sourceMappingURL=style.css.map */

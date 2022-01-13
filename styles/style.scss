@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
   & h1 {
     font-size: 2.8em;
     text-align: center;
@@ -80,11 +80,12 @@ main {
     background-color: #334756;
     color: #082032;
     font-weight: 600;
-    box-shadow: 0 0 12px antiquewhite;
+    box-shadow: 0 0 7px antiquewhite;
 
     &--create {
       grid-row: 2;
       grid-column: 4;
+      box-shadow: 0 0 12px antiquewhite;
       &:active {
         box-shadow: 0 0 20px green;
       }
@@ -92,6 +93,7 @@ main {
     &--copy {
       grid-row: 6;
       grid-column: 2;
+
       &:active {
         box-shadow: 0 0 20px skyblue;
       }
@@ -120,5 +122,45 @@ main {
     padding: 0.6em;
     border-radius: 0.4em;
     font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: 5% auto 2em auto 5%;
+    grid-template-rows: auto;
+    max-width: 70%;
+  }
+
+  .intro {
+    grid-column: 2;
+    // max-width: 35%;
+  }
+
+  .generator {
+    grid-row: 1;
+    grid-column: 4;
+    height: 10em;
+
+    &__btn {
+      &:hover {
+        box-shadow: 0 0 20px antiquewhite;
+      }
+      &--create {
+        &:active {
+          box-shadow: 0 0 20px green;
+        }
+      }
+      &--copy {
+        &:active {
+          box-shadow: 0 0 20px skyblue;
+        }
+      }
+      &--reset {
+        &:active {
+          box-shadow: 0 0 20px red;
+        }
+      }
+    }
   }
 }
